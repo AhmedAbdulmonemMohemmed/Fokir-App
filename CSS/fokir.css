@@ -1,0 +1,871 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global style */
+
+:root {
+    --main-color: #FF305B;
+    --second-color: #333333;
+    --p-color: #555555;
+    --background-sec: #F1F1F1;
+}
+
+/* Navbar */
+.navbar-brand {
+    color: var(--main-color) !important;
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--main-color) !important;
+
+}
+
+.nav-link:hover {
+    color: var(--main-color) !important;
+
+}
+
+.nav-link {
+    color: white !important;
+}
+
+.navbar {
+    border-bottom: 2px solid rgba(230, 71, 147, 0.1);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Home */
+.landing {
+    background-image: url(../images/slider-02.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.landing {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.landing h1 {
+    font-size: 70px;
+    color: var(--main-color);
+}
+
+
+@media screen and (max-width:768px) {
+    .landing h1 {
+        font-size: 40px;
+    }
+
+    .landing h4 {
+        font-size: 16px;
+    }
+
+}
+
+/* About */
+
+
+.profile-box img {
+    border-radius: 2%;
+    position: relative;
+}
+
+.profile-overlay {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 2%;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.5s ease 0s;
+}
+
+.profile-overlay:hover {
+    opacity: 1;
+}
+
+
+.fa-brands {
+    transition: all 0.2s;
+    color: white;
+}
+
+.fa-brands:hover {
+    color: var(--main-color);
+}
+
+.profile-box::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    top: -15px;
+    right: -10px;
+    background-color: var(--p-color);
+}
+
+.profile-box::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    bottom: -15px;
+    left: -10px;
+    background-color: var(--p-color);
+}
+
+.profile-info h3 {
+    color: var(--second-color);
+    position: relative;
+
+}
+
+.profile-info p {
+    color: var(--p-color);
+    line-height: 1.5rem;
+}
+
+.profile-info li {
+    color: var(--p-color);
+}
+
+.profile-info strong {
+    color: var(--second-color);
+}
+
+.profile-info a:hover {
+    background-color: red;
+    color: aliceblue;
+}
+
+.profile-info a {
+    background-color: #FF305B;
+    color: white;
+    font-weight: bold;
+}
+
+*::after {
+    box-sizing: border-box;
+}
+
+h3::after {
+    position: absolute;
+    content: '';
+    width: 4px;
+    height: 100%;
+    top: 0;
+    left: -8px;
+    background-color: var(--main-color);
+}
+
+/* Media Screen for About section  */
+@media screen and (max-width:992px) {
+
+    .profile-info h3 {
+        margin-top: 3rem;
+    }
+
+    .profile-info li {
+        margin-bottom: 10px;
+    }
+}
+
+
+
+/* Services */
+
+#services {
+    background-color: var(--background-sec);
+    padding-block: 4rem;
+}
+
+#services h2 {
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--second-color);
+    text-align: center;
+    padding: 2.5rem;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+#services h2::after,
+#services h2::before {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#services h2::after {
+    content: '';
+    width: 12%;
+    height: 0.5px;
+    background-color: var(--main-color);
+    bottom: 24px;
+
+}
+
+#services h2::before {
+    content: '';
+    width: 100px;
+    height: 8%;
+    bottom: 19px;
+    border-block: 0.5px solid var(--main-color);
+
+}
+
+/* Media for services section */
+
+@media screen and (max-width:768px) {
+    #services {
+        padding-block: 0;
+    }
+
+    #services h2::after {
+        content: '';
+        width: 25%;
+        height: 0.5px;
+        background-color: var(--main-color);
+        bottom: 25px;
+
+    }
+
+    #services h2::before {
+        content: '';
+        width: 34%;
+        height: 8%;
+        bottom: 20px;
+        border-block: 0.5px solid var(--main-color);
+
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1199px) {
+
+
+    #services h2::after {
+        content: '';
+        width: 20%;
+        height: 0.5px;
+        background-color: var(--main-color);
+        bottom: 24px;
+
+    }
+
+    #services h2::before {
+        content: '';
+        width: 25%;
+        height: 8%;
+        bottom: 19px;
+        border-block: 0.5px solid var(--main-color);
+
+    }
+}
+
+
+#services .card-body {
+    transition: all 0.5s ease-out;
+}
+
+#services .card-body:hover {
+    background-color: #FFFFFF;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
+}
+
+#services .card-body img {
+    transition: all 0.5s ease-out;
+}
+
+#services .card-body:hover img {
+    transform: scale(1.2);
+}
+
+#services .card-body h4 {
+    color: var(--second-color);
+}
+
+#services .card-body p {
+    color: var(--p-color);
+}
+
+@media screen and (max-width:576px) {
+    #services .container {
+        padding: 2.5rem;
+    }
+
+    #services h2 {
+        font-size: 30px;
+    }
+}
+
+/* Portfolio */
+
+#Portifilo {
+    margin-bottom: 5rem;
+}
+
+#Portifilo h2 {
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--second-color);
+    text-align: center;
+    padding: 2.5rem;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+#Portifilo .protifilo-img {
+    position: relative;
+}
+
+#Portifilo .protifilo-img .layer-box {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    transition: all 0.5s ease-out;
+}
+
+#Portifilo .protifilo-img .layer-box:hover {
+    opacity: 1;
+}
+
+#Portifilo h2::after,
+#Portifilo h2::before {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#Portifilo h2::after {
+    content: '';
+    width: 12%;
+    height: 0.5px;
+    background-color: var(--main-color);
+    bottom: 24px;
+
+}
+
+#Portifilo h2::before {
+    content: '';
+    width: 100px;
+    height: 8%;
+    bottom: 19px;
+    border-block: 0.5px solid var(--main-color);
+
+}
+
+/* Media for Portifilo section */
+
+@media screen and (max-width:768px) {
+
+    #Portifilo .nav {
+        flex-wrap: nowrap;
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    #Portifilo h2 {
+        font-size: 32px;
+    }
+
+    #Portifilo h2::after {
+        content: '';
+        width: 25%;
+        height: 0.5px;
+        background-color: var(--main-color);
+        bottom: 25px;
+
+    }
+
+    #Portifilo h2::before {
+        content: '';
+        width: 34%;
+        height: 8%;
+        bottom: 20px;
+        border-block: 0.5px solid var(--main-color);
+
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1199px) {
+
+
+    #Portifilo h2::after {
+        content: '';
+        width: 20%;
+        height: 0.5px;
+        background-color: var(--main-color);
+        bottom: 24px;
+
+    }
+
+    #Portifilo h2::before {
+        content: '';
+        width: 25%;
+        height: 8%;
+        bottom: 19px;
+        border-block: 0.5px solid var(--main-color);
+
+    }
+}
+
+
+#Portifilo .nav-link {
+    color: var(--second-color) !important;
+}
+
+#Portifilo .nav-link.active {
+    border: none;
+    color: var(--main-color) !important;
+}
+
+#Portifilo .nav-tabs .nav-link {
+    border: none;
+    background-color: transparent !important;
+}
+
+#Portifilo .nav-tabs {
+    border-bottom: none;
+}
+
+#Portifilo .protifilo-img img {
+    position: relative;
+}
+
+@media screen and (max-width:768px) {
+    #Portifilo .nav-tabs {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+}
+
+
+
+/* Counter Section */
+
+#counter {
+    background-color: var(--background-sec);
+    padding: 3rem;
+}
+
+
+#counter h6 {
+    color: var(--p-color);
+}
+
+#counter img {
+    margin-bottom: 1rem;
+}
+
+
+/* Media for Counter */
+
+@media screen and (max-width:768px) {
+    #counter .col-md-3 {
+        margin-bottom: 2rem;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:992px) {
+    #counter .col-md-3 img {
+        width: 15%;
+    }
+}
+
+/* Client */
+.carousel-indicators {
+    margin-bottom: -2rem !important;
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: #555555 !important;
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50% !important;
+}
+
+#Client p {
+    color: var(--p-color);
+}
+
+#Client .card {
+    position: relative;
+}
+
+#Client h2 {
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--second-color);
+    text-align: center;
+    padding: 2.5rem;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+#Client h2::after,
+#Client h2::before {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#Client h2::after {
+    content: '';
+    width: 12%;
+    height: 0.5px;
+    background-color: var(--main-color);
+    bottom: 24px;
+
+}
+
+#Client h2::before {
+    content: '';
+    width: 100px;
+    height: 8%;
+    bottom: 19px;
+    border-block: 0.5px solid var(--main-color);
+
+}
+
+/* Media for Client section */
+
+@media screen and (max-width:768px) {
+
+
+    #Client h2::after {
+        content: '';
+        width: 25%;
+        height: 0.5px;
+        background-color: var(--main-color);
+        bottom: 25px;
+
+    }
+
+    #Client h2::before {
+        content: '';
+        width: 34%;
+        height: 8%;
+        bottom: 20px;
+        border-block: 0.5px solid var(--main-color);
+
+    }
+
+    #Client img {
+        width: 30%;
+    }
+
+    #Client h2 {
+        font-size: 32px;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1199px) {
+
+
+    #Client h2::after {
+        content: '';
+        width: 20%;
+        height: 0.5px;
+        background-color: var(--main-color);
+        bottom: 24px;
+
+    }
+
+    #Client h2::before {
+        content: '';
+        width: 25%;
+        height: 8%;
+        bottom: 19px;
+        border-block: 0.5px solid var(--main-color);
+
+    }
+
+    #Client img {
+        width: 15%;
+    }
+}
+
+
+
+/* BLOG */
+
+#Blog {
+    background-color: var(--background-sec);
+    padding: 2.5rem;
+    margin-top: 3.5rem;
+}
+
+#Blog .card p {
+    color: var(--p-color);
+}
+
+#Blog .blog-item{
+    transition: all 0.5s ease-out;
+}
+#Blog .blog-item:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+
+#Blog h2 {
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--second-color);
+    text-align: center;
+    padding: 2.5rem;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+#Blog h2::after,
+#Blog h2::before {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#Blog h2::after {
+    content: '';
+    width: 12%;
+    height: 0.5px;
+    background-color: var(--main-color);
+    bottom: 24px;
+
+}
+
+#Blog h2::before {
+    content: '';
+    width: 100px;
+    height: 8%;
+    bottom: 19px;
+    border-block: 0.5px solid var(--main-color);
+
+}
+
+#Blog span,
+p {
+    color: var(--p-color);
+}
+
+/* Media for Blog section */
+
+@media screen and (max-width:768px) {
+
+
+    #Blog h2::after {
+        content: '';
+        width: 25%;
+        height: 0.5px;
+        background-color: var(--main-color);
+        bottom: 25px;
+
+    }
+
+    #Blog h2::before {
+        content: '';
+        width: 34%;
+        height: 8%;
+        bottom: 20px;
+        border-block: 0.5px solid var(--main-color);
+
+    }
+
+    #Blog h2 {
+        font-size: 32px;
+    }
+
+    #Blog h5 {
+        font-size: 19px;
+    }
+
+
+}
+
+@media screen and (min-width:768px) and (max-width:1199px) {
+
+
+    #Blog h2::after {
+        content: '';
+        width: 20%;
+        height: 0.5px;
+        background-color: var(--main-color);
+        bottom: 24px;
+
+    }
+
+    #Blog h2::before {
+        content: '';
+        width: 25%;
+        height: 8%;
+        bottom: 19px;
+        border-block: 0.5px solid var(--main-color);
+
+    }
+
+}
+
+@media screen and (max-width:992px) {
+    #Blog .col-lg-4 {
+        margin-bottom: 2.5rem;
+    }
+}
+
+
+/* Contact */
+
+#contact .btn {
+    background-color: #FF305B;
+    color: white;
+}
+
+#contact h2 {
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--second-color);
+    text-align: center;
+    padding: 2.5rem;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+#contact h2::after,
+#contact h2::before {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#contact h2::after {
+    content: '';
+    width: 12%;
+    height: 0.5px;
+    background-color: var(--main-color);
+    bottom: 24px;
+
+}
+
+#contact h2::before {
+    content: '';
+    width: 100px;
+    height: 8%;
+    bottom: 19px;
+    border-block: 0.5px solid var(--main-color);
+
+}
+
+#contact span,
+p {
+    color: var(--p-color);
+}
+
+#contact a:hover {
+    background-color: red;
+    color: aliceblue;
+}
+
+#contact a {
+    background-color: #FF305B;
+    color: white;
+
+}
+
+
+/* Media for contact section */
+
+@media screen and (max-width:768px) {
+
+    #contact .container {
+        padding: 3rem;
+    }
+
+    #contact h2::after {
+        content: '';
+        width: 25%;
+        height: 0.5px;
+        background-color: var(--main-color);
+        bottom: 25px;
+
+    }
+
+    #contact h2::before {
+        content: '';
+        width: 34%;
+        height: 8%;
+        bottom: 20px;
+        border-block: 0.5px solid var(--main-color);
+
+    }
+
+    #contact h2 {
+        font-size: 32px;
+    }
+
+
+}
+
+@media screen and (min-width:768px) and (max-width:1199px) {
+
+
+    #contact h2::after {
+        content: '';
+        width: 20%;
+        height: 0.5px;
+        background-color: var(--main-color);
+        bottom: 24px;
+
+    }
+
+    #contact h2::before {
+        content: '';
+        width: 25%;
+        height: 8%;
+        bottom: 19px;
+        border-block: 0.5px solid var(--main-color);
+
+    }
+}
+
+#contact textarea {
+    resize: none;
+}
+
+
+/* Footerr */
+
+
+#Footer {
+    background-color: var(--second-color);
+    padding: 3rem;
+}
+
+#Footer p {
+    color: #F1F1F1;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+#Footer span {
+    transition: all 0.5s ease-out;
+    cursor: pointer;
+}
+
+#Footer span:hover {
+    color: var(--main-color);
+}
+
+@media screen and (max-width:768px) {
+    #Footer p {
+        font-size: 10px;
+    }
+}
